@@ -1,16 +1,9 @@
 buildscript {
     repositories {
-        mavenCentral()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
-
-        google()
+        google() // here
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
-
+        //classpath 'com.android.tools.build:gradle:3.2.1'
     }
 }
 apply plugin: 'com.android.library'
@@ -20,7 +13,7 @@ dependencies {
 }
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion "28.0.3"
 
     sourceSets {
